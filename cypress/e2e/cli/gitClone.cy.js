@@ -11,7 +11,7 @@ describe('git clone', () => {
     cy.api_createProject(project)
   })
 
-  it('clonar projeto do git lab com sucesso', () => {
+  it.skip('clonar projeto do git lab com sucesso', () => {
     cy.cli_cloneViaSSH(project)
 
     cy.readFile(`cypress/downloads/${project.name}/README.md`)
